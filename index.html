@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/dest/css/styles.css" />
+    <link rel="stylesheet" href="dest/css/styles.css" />
     <title>Web Develop</title>
   </head>
   <body>
@@ -17,6 +17,19 @@
     <main>
       <div id="myPost">
         <input type="email" class="form-control" placeholder="영화 URL" />
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupSelect01"
+            >Rating</label
+          >
+          <select class="form-select">
+            <option selected>Choose...</option>
+            <option value="1">✨</option>
+            <option value="2">✨✨</option>
+            <option value="3">✨✨✨</option>
+            <option value="4">✨✨✨✨</option>
+            <option value="5">✨✨✨✨✨</option>
+          </select>
+        </div>
         <textarea class="form-control" rows="3" placeholder="코멘트"></textarea>
         <div class="post-btns">
           <button class="post-submit_btn">기록하기</button>
