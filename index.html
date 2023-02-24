@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dest/css/styles.css" />
     <title>Web Develop</title>
+    <script>
+      async function getData() {
+        const { temp } = await (
+          await fetch("http://spartacodingclub.shop/sparta_api/weather/seoul")
+        ).json();
+        const showTemp = document.getElementById("show-temp");
+        showTemp.innerText = `현재 서울의 날씨: ${temp}도`;
+      }
+      getData();
+      setInterval(() => getData(), 1000 * 900);
+    </script>
   </head>
   <body>
     <header>
@@ -109,16 +120,5 @@
         </div>
       </div>
     </main>
-    <script>
-      async function getData() {
-        const { temp } = await (
-          await fetch("http://spartacodingclub.shop/sparta_api/weather/seoul")
-        ).json();
-        const showTemp = document.getElementById("show-temp");
-        showTemp.innerText = `현재 서울의 날씨: ${temp}도`;
-      }
-      getData();
-      setInterval(() => getData(), 1000 * 900);
-    </script>
   </body>
 </html>
